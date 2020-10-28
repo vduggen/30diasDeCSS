@@ -1,0 +1,115 @@
+header {
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  font: bold 2rem monospace;
+}
+
+/* -------------------------------------------------------------------------- */
+
+main {
+  height: calc(100vh - 200px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  width: 70px;
+  height: 70px;
+  margin: 0 2.5rem;
+
+  transform: rotate(-30deg) skew(25deg);
+  transition: ease-in-out 0.3s;
+
+  position: relative;
+
+  cursor: pointer;
+}
+
+.box:nth-child(1) span {
+  background-color: #3b5998;
+}
+
+.box:nth-child(2) span {
+  background-color: #00acee;
+}
+
+.box:nth-child(3) span {
+  background-color: #ea4335;
+}
+
+.box:nth-child(4) span {
+  background-color: #0e76a8;
+}
+
+.box:nth-child(5) span {
+  background-color: #dd2a7b;
+}
+
+.box span:nth-of-type(1) {
+  z-index: 3;
+}
+
+.box:hover span:nth-of-type(1) {
+  transform: translate(30px, -30px);
+}
+
+.box:hover span:nth-of-type(2) {
+  transform: translate(20px, -20px);
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.box:hover span:nth-of-type(3) {
+  transform: translate(10px, -10px);
+  opacity: 0.6;
+  z-index: 2;
+}
+
+.box:hover span:nth-of-type(4) {
+  transform: translate(0px, 0px);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.box span svg {
+  width: 35px;
+  fill: #fff;
+}
+
+.box span {
+  width: 100%;
+  height: 100%;
+  transition: ease-in-out 0.3s;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  box-shadow: 0 0 8px #00000030;
+}
+
+/* -------------------------------------------------------------------------- */
+
+footer h4 {
+  font: 500 1.3rem monospace;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer h4 a {
+  margin-left: 0.5rem;
+}
