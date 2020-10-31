@@ -75,10 +75,12 @@ main .effect1::after {
 
 main .effect1:hover::before {
   left: 80%;
+  transform: rotate(120deg);
 }
 
 main .effect1:hover::after {
   right: 80%;
+  transform: rotate(-63deg);
 }
 
 /*******************************************************************************
