@@ -1,0 +1,204 @@
+body {
+  background: #333;
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  font: bold 2rem monospace;
+}
+
+/*******************************************************************************
+                                Start Main
+*******************************************************************************/
+
+main {
+  height: calc(100vh - 200px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main button {
+  text-transform: uppercase;
+  padding: 1rem;
+  font: 500 1rem "Ubuntu", sans-serif;
+  background: transparent;
+  border: none;
+  border: 5px solid #8257e6;
+  color: #fff;
+  cursor: pointer;
+  margin: 0.5rem 0;
+
+  position: relative;
+}
+
+/*******************************************************************************
+                                Start Effect 1
+*******************************************************************************/
+
+main .effect1::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  height: 10px;
+  width: 15px;
+  z-index: 1;
+  background: #333;
+  transform: rotate(63deg);
+  transition: ease-in-out 0.3s;
+}
+
+main .effect1::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: 10px;
+  height: 10px;
+  width: 15px;
+  z-index: 1;
+  background: #333;
+  transform: rotate(63deg);
+  transition: ease-in-out 0.3s;
+}
+
+main .effect1:hover::before {
+  left: 80%;
+}
+
+main .effect1:hover::after {
+  right: 80%;
+}
+
+/*******************************************************************************
+                                Start Effect 2
+*******************************************************************************/
+
+main .effect2 {
+  border: none;
+}
+
+.line:first-of-type {
+  position: absolute;
+  width: 5px;
+  height: 0%;
+  top: 0;
+  left: 0;
+  background: #8257e6;
+  transition: ease-in-out 0.3s;
+}
+
+.line:last-of-type {
+  position: absolute;
+  width: 5px;
+  height: 0%;
+  bottom: 0;
+  right: 0;
+  background: #8257e6;
+  transition: ease-in-out 0.3s;
+}
+
+main .effect2::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  top: 0;
+  right: 0;
+  background: #8257e6;
+  transition: ease-in-out 0.3s;
+}
+
+main .effect2::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background: #8257e6;
+  transition: ease-in-out 0.3s;
+}
+
+main .effect2:hover::before {
+  width: 100%;
+  animation: borderEffectTopAndBottom 0.3s linear;
+}
+
+main .effect2:hover::after {
+  width: 100%;
+  animation: borderEffectTopAndBottom 0.3s linear;
+}
+
+main .effect2:hover .line:first-of-type {
+  height: 100%;
+  animation: borderEffectLeftAndRight 0.4s linear;
+}
+
+main .effect2:hover .line:last-of-type {
+  height: 100%;
+  animation: borderEffectLeftAndRight 0.4s linear;
+}
+
+/*******************************************************************************
+                                End Main
+*******************************************************************************/
+
+footer h4 {
+  font: 500 1.3rem monospace;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer h4 a {
+  margin-left: 0.5rem;
+  color: rgb(0, 110, 255);
+}
+
+/*******************************************************************************
+                                  Effects
+*******************************************************************************/
+
+@keyframes borderEffectTopAndBottom {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes borderEffectLeftAndRight {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 25%;
+  }
+  50% {
+    height: 50%;
+  }
+  100% {
+    height: 100%;
+  }
+}
