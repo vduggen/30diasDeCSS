@@ -26,6 +26,38 @@ main {
   justify-content: center;
 }
 
+main h1 {
+  font: normal 5rem monospace;
+  color: #fff;
+  text-transform: uppercase;
+
+  position: relative;
+  width: 340px;
+}
+
+main h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  animation: word-switch 2s linear infinite;
+}
+
+@keyframes word-switch {
+  0% {
+    content: "💻";
+  }
+
+  50% {
+    content: "🍕";
+  }
+
+  100% {
+    content: "🎮";
+  }
+}
+
 /* -------------------------------------------------------------------------- */
 
 footer h4 {
