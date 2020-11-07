@@ -26,6 +26,30 @@ main {
   justify-content: center;
 }
 
+main h1 {
+  font: bold 10rem monospace;
+
+  position: relative;
+  color: #25d3658e;
+  cursor: pointer;
+}
+
+main h1::before {
+  content: "#30DIASDECSS";
+  color: #25d366;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 0%;
+  transition: ease-in-out 0.3s;
+}
+
+main h1:hover::before {
+  width: 100%;
+}
+
 /* -------------------------------------------------------------------------- */
 
 footer h4 {
