@@ -1,0 +1,92 @@
+body {
+  background: #333;
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  font: bold 2rem monospace;
+}
+
+/* -------------------------------------------------------------------------- */
+
+main {
+  height: calc(100vh - 200px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main span {
+  font: bold 10rem monospace;
+  animation: loading 3s ease infinite;
+  letter-spacing: 20px;
+  opacity: 0;
+}
+
+main span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+main span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+main span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+main span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+main span:nth-child(6) {
+  animation-delay: 1s;
+}
+main span:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+@keyframes loading {
+  0% {
+    letter-spacing: 20px;
+    opacity: 0;
+    color: red;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    letter-spacing: -20px;
+    transform: translateX(20px);
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    color: yellow;
+    letter-spacing: 20px;
+    opacity: 0;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+
+footer h4 {
+  font: 500 1.3rem monospace;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer h4 a {
+  margin-left: 0.5rem;
+}
