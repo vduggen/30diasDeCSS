@@ -26,6 +26,24 @@ main {
   justify-content: center;
 }
 
+main h1 {
+  font: bold 13rem monospace;
+  background: url(bg.png);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: moveBackground 15s linear infinite;
+}
+
+@keyframes moveBackground {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
 /* -------------------------------------------------------------------------- */
 
 footer h4 {
