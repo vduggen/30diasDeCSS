@@ -18,12 +18,29 @@ header h1 {
 
 /* -------------------------------------------------------------------------- */
 
-main {
+#c-body {
   height: calc(100vh - 200px);
 
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#c-body__text {
+  font: bold 10rem monospace;
+  text-shadow: 15px 15px 8px #00000030;
+  text-align: center;
+  color: orange;
+  animation: rotateText 3s linear infinite alternate;
+}
+
+@keyframes rotateText {
+  from {
+    transform: rotate(5deg);
+  }
+  to {
+    transform: rotate(-5deg);
+  }
 }
 
 /* -------------------------------------------------------------------------- */
