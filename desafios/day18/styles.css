@@ -18,12 +18,47 @@ header h1 {
 
 /* -------------------------------------------------------------------------- */
 
-main {
+#body {
   height: calc(100vh - 200px);
 
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#body__item {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#body__item span {
+  font: bold 10rem monospace;
+  margin: 0 1rem;
+  transition: 1s;
+}
+
+#body__item:hover span {
+  transform: rotate(45deg) translateY(-200px);
+  opacity: 0;
+  filter: blur(20px);
+}
+
+#body__item span:nth-child(2) {
+  transition-delay: 0s;
+}
+#body__item span:nth-child(2) {
+  transition-delay: 0.2s;
+}
+#body__item span:nth-child(3) {
+  transition-delay: 0.4s;
+}
+#body__item span:nth-child(4) {
+  transition-delay: 0.6s;
+}
+#body__item span:nth-child(5) {
+  transition-delay: 0.8s;
 }
 
 /* -------------------------------------------------------------------------- */
