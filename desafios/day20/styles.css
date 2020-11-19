@@ -26,6 +26,41 @@ main {
   justify-content: center;
 }
 
+main button {
+  width: 180px;
+  height: 50px;
+  background: transparent;
+  border: none;
+  border: 1px solid #fff;
+  color: #fff;
+  font: normal 1.2rem monospace;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: ease-in-out 0.3s;
+}
+
+main button::before {
+  content: "";
+  border: 5px solid #fff;
+  height: 130%;
+  transform: rotate(-25deg);
+
+  position: absolute;
+  top: -7px;
+  left: -25px;
+
+  transition: 0.3s;
+}
+
+main button:hover {
+  background: #000;
+}
+
+main button:hover::before {
+  left: 110%;
+}
+
 /* -------------------------------------------------------------------------- */
 
 footer h4 {
