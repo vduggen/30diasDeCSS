@@ -26,6 +26,23 @@ main {
   justify-content: center;
 }
 
+main button {
+  width: 150px;
+  height: 50px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font: 500 1.3rem monospace;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+main button:hover {
+  color: #25d366;
+  border-color: #25d366;
+  animation: shake 0.2s linear;
+}
+
 /* -------------------------------------------------------------------------- */
 
 footer h4 {
@@ -39,4 +56,18 @@ footer h4 {
 
 footer h4 a {
   margin-left: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+
+@keyframes shake {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
 }
