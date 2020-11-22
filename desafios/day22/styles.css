@@ -1,0 +1,117 @@
+body {
+  background: #333;
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  font: bold 2rem monospace;
+}
+
+/* -------------------------------------------------------------------------- */
+
+main {
+  height: calc(100vh - 200px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main span {
+  border: 1px solid #25d366;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main span::before {
+  content: "";
+  background: #25d366;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+main span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #25d366;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s;
+  background: transparent;
+  z-index: 3;
+}
+
+main span i::before {
+  font-size: 1.5rem;
+  color: #25d366;
+  transition: all 0.3s;
+}
+
+main span:hover i::before {
+  color: #fff;
+}
+
+main span:hover::before {
+  opacity: 1;
+  transform: scale(0.75);
+}
+
+main span:hover::after {
+  opacity: 1;
+  animation: rotate 2s linear infinite;
+}
+
+/* -------------------------------------------------------------------------- */
+
+footer h4 {
+  font: 500 1.3rem monospace;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer h4 a {
+  margin-left: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+
+@keyframes rotate {
+  from {
+    transform: scale(0.9) rotate(0deg);
+  }
+  to {
+    transform: scale(0.9) rotate(360deg);
+  }
+}
