@@ -26,6 +26,34 @@ main {
   justify-content: center;
 }
 
+main ul {
+  display: flex;
+}
+
+main ul li {
+  margin: 0 2rem;
+}
+
+ul li label input[type="checkbox"] {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+
+  position: absolute;
+  opacity: 0;
+}
+
+ul li label input[type="checkbox"]:checked ~ .icon i {
+  color: #00f3ff;
+  animation: changeColor 5s linear infinite;
+  cursor: pointer;
+}
+
+ul li label .icon i {
+  font-size: 2.5rem;
+  color: #666;
+}
+
 /* -------------------------------------------------------------------------- */
 
 footer h4 {
@@ -39,4 +67,15 @@ footer h4 {
 
 footer h4 a {
   margin-left: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+
+@keyframes changeColor {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
 }
