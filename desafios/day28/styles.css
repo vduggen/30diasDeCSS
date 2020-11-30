@@ -1,6 +1,7 @@
 body {
   background: #333;
   color: #fff;
+  animation: changeBackground 15s linear infinite alternate;
 }
 
 header {
@@ -24,6 +25,12 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+main h1 {
+  color: #fff;
+  font: 900 4rem "Arial", sans-serif;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -39,4 +46,24 @@ footer h4 {
 
 footer h4 a {
   margin-left: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+
+@keyframes changeBackground {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: green;
+  }
+  75% {
+    background-color: cyan;
+  }
+  100% {
+    background-color: blue;
+  }
 }
